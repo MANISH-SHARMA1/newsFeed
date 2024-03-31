@@ -16,6 +16,7 @@ function CreateNews() {
 
   const dispatch = useDispatch();
 
+  // function to handle image change
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     const fileReader = new FileReader();
@@ -27,6 +28,7 @@ function CreateNews() {
     };
   };
 
+  // function to handle video change
   const handleVideoChange = (e) => {
     const file = e.target.files[0];
     console.log("vdo: ", vdo);
@@ -40,9 +42,11 @@ function CreateNews() {
     };
   };
 
+  //function to publish news
   function publish(e) {
     e.preventDefault();
 
+    // create a unique id for every different news
     const id = uuidv4();
     const date = new Date().toLocaleDateString("en-US");
 
@@ -128,14 +132,16 @@ function CreateNews() {
               <button type="submit">Publish</button>
             </form>
 
+            {/* click to show mobile view and hide mobile view */}
             <button onClick={() => setMobileView(!mobileView)}>
               {mobileView ? "Hide Mobile View" : "Show Mobile View"}
             </button>
           </div>
         </div>
+
+        {/* Admin can see mobile view of the news before publishing */}
         {mobileView && (
           <div className="mobile-view-container">
-            
             <div className="mobileView">
               <div className="content">
                 <h2>{title}</h2>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { RxDashboard } from "react-icons/rx";
 import { MdOutlineCreate, MdOutlineManageHistory } from "react-icons/md";
 import { GrDocumentPerformance } from "react-icons/gr";
-import './Navbar.scss'
+import "./Navbar.scss";
 
 function Navbar() {
   return (

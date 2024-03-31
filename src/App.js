@@ -6,9 +6,10 @@ import PerformanceReports from "./pages/performanceReports/PerformanceReports";
 import Navbar from "./components/navbar/Navbar";
 import ViewNews from "./components/viewNews/ViewNews";
 import EditNews from "./components/editNews/EditNews";
+import NewsFeed from "./pages/newsFeed/NewsFeed";
+import NewsDesc from "./components/newsDesc/NewsDesc";
 
 function App() {
-  // 767b05107fa142acb2b2e64a6a30ae68
   return (
     <div>
       <Navbar />
@@ -20,6 +21,8 @@ function App() {
         <Route path="/performanceReports" element={<PerformanceReports />} />
         <Route path="/viewNews/:newsId" element={<ViewNews />} />
         <Route path="/editNews/:newsId" element={<EditNews />} />
+        <Route path="newsFeed" element={<NewsFeed />} />
+        <Route path="/newsDesc/:newsId" element={<NewsDesc />} />
       </Routes>
     </div>
   );

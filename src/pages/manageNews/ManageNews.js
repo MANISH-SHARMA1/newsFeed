@@ -9,9 +9,8 @@ import { GrFormView } from "react-icons/gr";
 function ManageNews() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const news = useSelector((state) => state.newsReducer.news);
 
-  console.log("Selector News: ", news.length);
+  const news = useSelector((state) => state.newsReducer.news);
 
   return (
     <>
@@ -20,6 +19,7 @@ function ManageNews() {
         {news.length == 0 ? (
           <p>No News Available</p>
         ) : (
+          // table to show all over news created
           <table>
             <thead>
               <tr>
@@ -37,6 +37,7 @@ function ManageNews() {
                   <td>{data.category}</td>
                   <td>{data.date}</td>
                   <td>Published</td>
+                  {/* buttons to edit, delete and view news */}
                   <td>
                     <button onClick={() => navigate(`/editNews/${data.id}`)}>
                       <MdModeEdit />

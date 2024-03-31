@@ -23,6 +23,7 @@ function EditNews() {
     setCategory(curNews.category);
   }, []);
 
+  // function to update the news
   function update(e) {
     e.preventDefault();
     console.log(title, content, category);
