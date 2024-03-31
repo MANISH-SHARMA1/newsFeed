@@ -1,0 +1,129 @@
+.formPage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+
+  .form {
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 40vw;
+    background-color: #ffffff;
+    color: #007bff;
+
+    h2 {
+      text-align: center;
+    }
+    .label {
+      display: block;
+      margin-block: 15px;
+    }
+
+    input,
+    textarea {
+      border-radius: 5px;
+      border: 1px solid #007bff;
+      background-color: #ffffff;
+      color: #007bff;
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+
+    #content {
+      height: 30vh;
+      overflow-y: scroll;
+    }
+
+    #content::-webkit-scrollbar {
+      display: none;
+    }
+
+    .multimedia {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      #card {
+        cursor: pointer;
+      }
+      #image,
+      #video {
+        display: none;
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-bottom: 5px;
+      background-color: #ffffff;
+      color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 5px 0px;
+    }
+  }
+
+  .mobileView {
+
+    .content {
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      width: 25vw;
+      height: 100vh;
+      overflow: scroll;
+      background-color: #fff;
+      color: #007bff;
+
+      .img-container {
+        .news-img {
+          width: 100%;
+          aspect-ratio: 16/9;
+        }
+      }
+
+      #category {
+        font-weight: 600;
+      }
+
+      #news-content {
+        padding: 5px;
+      }
+    }
+
+    .content::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .formPage {
+    display: block;
+
+    .form-container{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .form{
+        width: 50vw;
+      }
+    }
+
+    .mobile-view-container{
+      display: flex;
+      justify-content: center;
+
+      .content{
+        width: 50vw;
+      }
+    }
+  }
+}

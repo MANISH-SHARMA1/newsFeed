@@ -1,0 +1,92 @@
+/* Overall layout */
+
+.main-content {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Chart styles */
+.chart-container {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.bar-chart {
+  display: flex;
+  gap: 25px;
+}
+
+.bar {
+  margin-bottom: 10px;
+}
+
+.bar-graph {
+  display: flex;
+  margin-top: 7px; /* Add margin top for spacing */
+  margin-bottom: 10px;
+}
+
+.views,
+.likes {
+  width: 50px;
+  background-color: #3498db; /* Blue for views */
+}
+
+.likes {
+  background-color: #2ecc71; /* Green for likes */
+}
+
+.line-graph,
+.pie-chart {
+  height: 300px;
+  background-color: #ecf0f1;
+}
+
+/* Color symbols */
+.color-symbols {
+  margin-bottom: 10px; /* Add margin for separation from the heading */
+}
+
+.likes-symbol {
+  margin-left: 20px;
+  margin-right: 5px; /* Adjust as needed */
+}
+
+/* Engagement Rate Chart */
+#engagement-rate-chart {
+  height: 500px !important; /* Adjust the height as needed */
+  width: 500px; /* You can also adjust the width if necessary */
+}
+
+/* Centering chart container content */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+/* Tooltip on hover */
+.bar:hover .views,
+.bar:hover .likes {
+  position: relative;
+}
+
+.bar:hover .views:after,
+.bar:hover .likes:after {
+  content: attr(data-count);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .performance-reports-container {
+    flex-direction: column; /* Stack side panel and main content vertically */
+  }
+}

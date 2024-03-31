@@ -1,0 +1,44 @@
+.formPage {
+  .editForm {
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    width: 40vw;
+    color: #007bff;
+
+    h2 {
+      text-align: center;
+    }
+    .label {
+      display: block;
+      margin-block: 15px;
+    }
+
+    input,
+    textarea {
+      border-radius: 5px;
+      border: 1px solid #007bff;
+      color: #007bff;
+      background-color: #ffffff;
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+
+    #content {
+      height: 30vh;
+      overflow-y: scroll;
+    }
+
+    #content::-webkit-scrollbar {
+      display: none;
+    }
+
+    #submit{
+        cursor: pointer;
+    }
+  }
+}

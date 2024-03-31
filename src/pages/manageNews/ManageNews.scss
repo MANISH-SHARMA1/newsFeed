@@ -1,0 +1,32 @@
+h2, p {
+  text-align: center;
+  color: #007bff;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+
+  table {
+    border: 1px solid #007bff;
+    color: #007bff;
+    border-radius: 5px;
+    padding: 5px;
+    thead {
+      font-weight: bold;
+    }
+
+    td {
+      padding: 5px;
+      border: 1px dashed #007bff;
+      border-radius: 2px;
+
+      button {
+        font-size: 1.1rem;
+        background: #ffff;
+        border: none;
+        color: #007bff;
+      }
+    }
+  }
+}

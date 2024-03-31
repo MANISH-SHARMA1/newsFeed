@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #2196f3;
+  padding: 10px 0px;
+
+  #link {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
